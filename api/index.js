@@ -38,6 +38,6 @@ app.get("/check", (req, res) => {
 
 
 
-
+export default app;
 
 
