@@ -19,7 +19,7 @@ app.use('/auth',router);
 
 app.use(async(req,res,next) => {
     try {
-        connectDb();
+        await connectDb();
         next()
     } catch (error) {
         console.log("Database Connection failed",error)
@@ -28,7 +28,9 @@ app.use(async(req,res,next) => {
         })
     }
 })
-
+app.get("/check", (req, res) => {
+  res.send("Backend running 🚀");
+});
 // app.listen(8000,()=> {
 //     connectDb();
 //     console.log("server")
