@@ -39,7 +39,8 @@ export const signup = async (req, res) => {
         console.log(error);
         return res.status(400).json({
             message: "Error found while signup",
-            success: false
+            success: false,
+            Error:error
         })
 
     }
